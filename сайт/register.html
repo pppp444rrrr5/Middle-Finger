@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo">📚 ПрактикаGuide</a>
+            <nav class="nav">
+                <a href="index.html">Главная</a>
+                <a href="login.html" class="btn btn-outline">Войти</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container form-page">
+        <form id="registerForm" class="form-card" novalidate>
+            <h2>Регистрация</h2>
+            <p class="hint">Создайте аккаунт для доступа к личному кабинету.</p>
+
+            <label>
+                ФИО
+                <input type="text" name="fullname" required minlength="3" placeholder="Иванов Иван Иванович">
+            </label>
+
+            <label>
+                Email
+                <input type="email" name="email" required placeholder="student@example.com">
+            </label>
+
+            <label>
+                Пароль
+                <input type="password" name="password" required minlength="6" placeholder="Минимум 6 символов">
+            </label>
+
+            <label>
+                Группа
+                <input type="text" name="group" required placeholder="ИС-21-1">
+            </label>
+
+            <div id="registerError" class="error"></div>
+            <button type="submit" class="btn btn-primary full-width">Зарегистрироваться</button>
+
+            <p class="form-footer">Уже есть аккаунт? <a href="login.html">Войти</a></p>
+        </form>
+    </main>
+
+    <script src="js/auth.js"></script>
+</body>
+</html>

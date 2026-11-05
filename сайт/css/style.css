@@ -1,0 +1,193 @@
+/* ---------- Базовые стили ---------- */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
+    background: #f4f6fb;
+    color: #1f2937;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a { color: #2563eb; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ---------- Шапка ---------- */
+.site-header {
+    background: #fff;
+    border-bottom: 1px solid #e5e7eb;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 20px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: #1e3a8a;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+/* ---------- Кнопки ---------- */
+.btn {
+    display: inline-block;
+    padding: 9px 16px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: 0.2s;
+    text-align: center;
+}
+
+.btn-primary {
+    background: #2563eb;
+    color: #fff;
+}
+.btn-primary:hover { background: #1d4ed8; text-decoration: none; }
+
+.btn-outline {
+    border-color: #2563eb;
+    color: #2563eb;
+    background: transparent;
+}
+.btn-outline:hover { background: #eff6ff; text-decoration: none; }
+
+.full-width { width: 100%; }
+
+/* ---------- Hero ---------- */
+.hero {
+    text-align: center;
+    padding: 50px 0 30px;
+}
+.hero h1 { font-size: 2rem; color: #1e3a8a; margin-bottom: 12px; }
+.hero p { color: #4b5563; font-size: 1.1rem; }
+
+/* ---------- Карточки ---------- */
+.instructions h2 { margin: 30px 0 20px; color: #1e3a8a; }
+
+.card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 22px 24px;
+    margin-bottom: 18px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    border-left: 4px solid #2563eb;
+}
+.card h3 { color: #1e3a8a; margin-bottom: 10px; }
+.card ul { margin: 10px 0 0 20px; }
+.card li { margin-bottom: 4px; }
+
+/* ---------- Формы ---------- */
+.form-page {
+    display: flex;
+    justify-content: center;
+    padding: 50px 20px;
+    flex: 1;
+}
+
+.form-card {
+    background: #fff;
+    padding: 32px;
+    border-radius: 14px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    width: 100%;
+    max-width: 440px;
+}
+.form-card h2 { color: #1e3a8a; margin-bottom: 8px; }
+.form-card .hint { color: #6b7280; font-size: 0.9rem; margin-bottom: 18px; }
+
+.form-card label {
+    display: block;
+    margin-bottom: 14px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #374151;
+}
+
+.form-card input {
+    width: 100%;
+    margin-top: 6px;
+    padding: 10px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    transition: 0.2s;
+}
+.form-card input:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37,99,235,0.15);
+}
+
+.form-footer {
+    margin-top: 16px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #6b7280;
+}
+
+.error {
+    color: #dc2626;
+    font-size: 0.9rem;
+    min-height: 20px;
+    margin-bottom: 8px;
+}
+
+/* ---------- Личный кабинет ---------- */
+.dashboard-header { padding: 40px 0 20px; }
+.dashboard-header h1 { color: #1e3a8a; margin-bottom: 8px; }
+
+.dashboard-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding-bottom: 40px;
+}
+.dashboard-cards .card { border-left: 4px solid #10b981; }
+
+.checklist { list-style: none; margin: 0; }
+.checklist li { margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
+.checklist input { width: 18px; height: 18px; cursor: pointer; }
+
+/* ---------- Футер ---------- */
+.site-footer {
+    margin-top: auto;
+    background: #1e3a8a;
+    color: #c7d2fe;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 0.9rem;
+}
+.site-footer a { color: #fff; }
+
+/* ---------- Адаптив ---------- */
+@media (max-width: 600px) {
+    .hero h1 { font-size: 1.5rem; }
+    .form-card { padding: 22px; }
+    .header-inner { justify-content: center; }
+}

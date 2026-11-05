@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo">📚 ПрактикаGuide</a>
+            <nav class="nav">
+                <a href="index.html">Главная</a>
+                <a href="#" id="logoutBtn" class="btn btn-outline">Выйти</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="dashboard-header">
+            <h1>Личный кабинет</h1>
+            <p>Добро пожаловать, <span id="userName">—</span>!</p>
+        </section>
+
+        <section class="dashboard-cards">
+            <div class="card">
+                <h3>Мои данные</h3>
+                <p><strong>ФИО:</strong> <span id="userFullName">—</span></p>
+                <p><strong>Email:</strong> <span id="userEmail">—</span></p>
+                <p><strong>Группа:</strong> <span id="userGroup">—</span></p>
+            </div>
+
+            <div class="card">
+                <h3>Прогресс практики</h3>
+                <ul class="checklist">
+                    <li><input type="checkbox" data-key="step1"> Задание получено</li>
+                    <li><input type="checkbox" data-key="step2"> Документы оформлены</li>
+                    <li><input type="checkbox" data-key="step3"> Практика пройдена</li>
+                    <li><input type="checkbox" data-key="step4"> Отчёт готов</li>
+                    <li><input type="checkbox" data-key="step5"> Отчёт защищён</li>
+                </ul>
+                <p class="hint">Прогресс сохраняется автоматически.</p>
+            </div>
+
+            <div class="card">
+                <h3>Полезные ссылки</h3>
+                <ul>
+                    <li><a href="index.html#instructions">Инструкции по практике</a></li>
+                    <li><a href="#">Шаблон дневника практики</a></li>
+                    <li><a href="#">Требования к отчёту</a></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/guard.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>
